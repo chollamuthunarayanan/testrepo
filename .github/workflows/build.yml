@@ -71,7 +71,6 @@ jobs:
       - usgserver
     container:
       image: "$IMAGE:$UNITY_VERSION-android-$IMAGE_VERSION"
-    if: $BUILD_AB == "true" || $BUILD_ANDROID_AB == "true"
     timeout-minutes: 60
     env:
       BUILD_NAME: usgeditor
@@ -110,7 +109,6 @@ jobs:
       - usgserver
     container:
       image: "$IMAGE:$UNITY_VERSION-ios-$IMAGE_VERSION"
-    if: $BUILD_AB == "true" || $BUILD_IOS_AB == "true"
     timeout-minutes: 60
     env:
       BUILD_NAME: usgeditor
@@ -149,7 +147,6 @@ jobs:
       - usgserver
     container:
       image: testwangwei/goodgame:2020.3.15f2-win-android-ios-editor
-    if: $BUILD_AB == "true" || $BUILD_ALL_AB == "true"
     timeout-minutes: 60
     env:
       BUILD_NAME: usgeditor
