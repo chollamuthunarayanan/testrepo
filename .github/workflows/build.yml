@@ -12,7 +12,7 @@ jobs:
       - usgserver
     container:
       image: "$IMAGE:$UNITY_VERSION-windows-mono-$IMAGE_VERSION"
-    if: ${{ BUILD_AB == 'true' || BUILD_WIN_AB == 'true' }}
+    if: ${{ env.BUILD_AB == 'true' || env.BUILD_WIN_AB == 'true' }}
     timeout-minutes: 60
     env:
       BUILD_NAME: usgeditor
